@@ -1,0 +1,50 @@
+/* Container for Search Bar */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #f4f4f4; /* Light gray background */
+    border: 1px solid #ddd; /* Border color */
+    padding: 5px 10px; /* Inner spacing */
+    width: 400px; /* Fixed width */
+}
+
+/* Input Field */
+.search-bar-input {
+    border: none; /* No border for input */
+    outline: none; /* Remove focus outline */
+    flex: 1; /* Takes remaining space */
+    font-size: 14px; /* Font size */
+    font-family: "Poppins", sans-serif; /* Font style */
+    background-color: transparent; /* Transparent background */
+    padding: 5px; /* Padding inside input */
+    color: #333; /* Text color */
+}
+
+/* Input Placeholder Text */
+.search-bar-input::placeholder {
+    color: #aaa; /* Placeholder color */
+    font-size: 13px; /* Placeholder font size */
+}
+
+/* Search Icon */
+.search-bar-icon {
+    display: flex; /* Flex for alignment */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    margin-left: 8px; /* Space between input and icon */
+}
+
+/* Search Icon Image */
+.search-bar-icon img {
+    width: 20px; /* Icon size */
+    height: 20px; /* Icon size */
+    cursor: pointer; 
+    margin-right:10px;/* Pointer cursor for interactivity */
+    transition: transform 0.2s ease; /* Smooth scale effect */
+}
+
+/* Icon Hover Effect */
+.search-bar-icon img:hover {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
