@@ -1,0 +1,92 @@
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allows the pagination to wrap on smaller screens */
+}
+
+/* Style for pagination buttons */
+.pagination-btn {
+  background-color: #322f2f; /* Default black background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.2s ease;
+  margin: 0 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Current page button */
+.pagination-btn.black {
+  background-color: #3a3838; /* Black for current page */
+  color: white;
+}
+
+/* Nearby page buttons in gray */
+.pagination-btn.gray {
+  background-color: #888; /* Gray for previous and next pages */
+  color: white;
+}
+
+/* Hover effect on buttons */
+.pagination-btn:hover {
+  background-color: #555; /* Slightly lighter black on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Disabled button style */
+.pagination-btn.disabled {
+  background-color: #ddd; /* Lighter color for disabled buttons */
+  color: #aaa;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none; /* No shadow for disabled */
+}
+
+/* Active button press effect */
+.pagination-btn:active {
+  background-color: #222; /* Darken background on button press */
+  transform: scale(0.98); /* Slightly shrink the button when clicked */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Add small shadow effect */
+}
+
+/* New Collection Title */
+.new-collection-title {
+  font-size: clamp(30px, calc(43 * (100vw / 1440)), 35px);
+  font-family: Jost-Medium, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: clamp(1.2, 1.5, 1.8);
+  letter-spacing: 0.05em;
+  margin: 50px 0;
+  color: #292424c7;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for title */
+.new-collection-title:hover {
+  color: #3a3838; /* Slight color change on hover */
+  transform: scale(1.05); /* Slightly increase the title size */
+}
+
+/* Strong title text */
+.new-collection-title strong {
+  color: black;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .pagination-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  .new-collection-title {
+    font-size: clamp(25px, calc(38 * (100vw / 1440)), 30px); /* Adjust title size on mobile */
+  }
+}

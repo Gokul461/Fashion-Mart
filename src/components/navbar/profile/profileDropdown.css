@@ -1,0 +1,49 @@
+
+/* Profile Dropdown Styles */
+/* Profile Dropdown Styles */
+.profile-dropdown-container {
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    background-color: rgb(230, 227, 227);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 210px;
+    font-weight: 500;
+    height: 290px; /* Automatically adjust height based on content */
+    transition: all 0.3s ease-in-out;
+}
+.login-button {
+    position:relative;
+    left:-8px;
+}
+.profile-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flex to arrange items in a row */
+    flex-wrap: wrap; /* Allow items to wrap if there is not enough space */
+    gap: 10px; /* Add gap between items */
+}
+.profile-dropdown li {
+    padding: 8px 16px;
+    font-size: 14px;
+    color:black;
+    cursor: pointer;
+    display: flex; /* Align items in a row */
+    flex-direction: row;
+}
+
+.prolink:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-dropdown a {
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-dropdown li a {
+    display: block;
+}

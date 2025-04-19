@@ -1,0 +1,106 @@
+/* General Styling */
+.swiper-head {
+    text-align: center;
+    margin:100px 0;
+    height:60vh;
+    color: #333;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Title Styling */
+  .swiper-head h1 {
+    font-size: clamp(30px, calc(43 * (100vw / 1440)), 45px);
+    font-family: Jost-Medium, Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: clamp(1.2, 1.5, 1.8);
+    letter-spacing: 0.05em;
+    color: #302e2ec7;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+.swiper-head h1 strong{
+    color:black;
+}
+
+
+  
+  /* Subtitle Styling */
+  .swiper-head p {
+    font-size: 20px;
+    font-weight: 300;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #666; 
+    margin-bottom: 20px;
+  }
+  
+  /* Carousel Container */
+  .slick-slider {
+    position: relative;
+  }
+  
+  .slick-list {
+    padding: 20px 0; /* Add spacing around slides */
+  }
+  
+  /* Slide Styling */
+  .slick-slide {
+    transform: scale(0.8); /* Default size for side slides */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+    opacity: 1; /* Dim side slides */
+  }
+  
+  .slick-center {
+    transform: scale(1.05); /* Highlight central slide */
+    opacity: 1; /* Fully visible central slide */
+    /* border-radius: px;  */
+  }
+  
+  /* Image Styling */
+  .carousel-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 35px; /* Smooth rounded corners */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+    margin: 0 auto;
+    margin:0 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  
+  /* Navigation Arrows */
+  .slick-arrow {
+    z-index: 1;
+    color:black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slick-arrow:before {
+    color: black;
+    font-size: 40px;
+  }
+
+  /* Dots Styling */
+  .slick-dots {
+    bottom: -30px; /* Adjust position */
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #000000; /* Match the arrow button color */
+    opacity: 0.8;
+  }
+  .slick-dots li button:hover:before {
+    border:gray 1px solid;
+    border-radius:50%;/* Change to an accent color on hover */
+  }
+  
+  
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #898989; /* Active dot color */
+  }
+  

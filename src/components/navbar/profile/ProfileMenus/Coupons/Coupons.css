@@ -1,0 +1,80 @@
+
+.coupons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+    min-height: 100vh;
+  }
+  .coupons-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #4c3c92;
+    margin-bottom: 50px;
+  }
+  
+  .coupons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .coupon {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .coupon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .coupon-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .coupon-description {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  .highlight {
+    font-weight: bold;
+  }
+
+  .discount {
+    background-color: #4caf50; 
+  }
+  
+  .free-shipping {
+    background-color: #2196f3; 
+  }
+  
+  .mens-collection {
+    background-color: #e91e63; 
+  }
+
+  .holiday-sale {
+    background-color: #ff9800;
+  }
+  
+  .bank-offer {
+    background-color: #3f51b5; 
+  }
+  
+  @media (max-width: 768px) {
+    .coupons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

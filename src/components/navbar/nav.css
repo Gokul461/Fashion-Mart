@@ -1,98 +1,91 @@
 /* Navbar Styles */
 .navbar {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 30px;
+    padding: 10px 62px;
     position: sticky;
     top: 0;
+    color: white;
     z-index: 1000;
 }
-
+.menu-item a {
+    color: white; /* Normal text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: none; /* Disable hover effects */
+  }
+  
+  .menu-item a:hover {
+    color: rgb(176, 64, 250);
+    text-decoration: none;
+  }
+/* Navbar items layout */
 nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none; /* Remove bullet points */
 }
 
+/* Individual menu item styles */
 nav ul li {
     font-size: 14px;
     font-weight: 630;
     cursor: pointer;
     display: flex;
+    margin-right: 40px;
+    color: white;
     align-items: center;
     position: relative;
-    color: #333;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Remove default link styling */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+/* Underline effect with lighter purple */
+nav ul li.menu-item a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 27, 209); 
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+/* Hover effect: Cyan color + Underline expansion */
+nav ul li.menu-item:hover {
+    color: rgb(0, 221, 255); /* Bright cyan hover effect */
+    transform: scale(1.05);
+}
+
+nav ul li.menu-item a:hover::after {
+    width: 100%;
+}
+
+/* Active (clicked) effect */
+nav ul li.menu-item:active {
+    color: #e5aaff; 
 }
 
 /* Logo Style */
 nav ul li.logo img {
     width: 100px;
-    height: 70px;
+    height: 80px;
 }
 
-/* Hover effects for menu items */
-nav ul li.menu-item {
-    transition: color 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out;
-}
-
-/* Menu item hover effect */
-nav ul li.menu-item:hover {
-    text-decoration: underline;
-    text-underline-offset: 42px; /* Adjust spacing between text and underline */
-    text-decoration-thickness: 3px; /* Thickness of the underline */
-}
-
-/* Specific hover colors for each menu item */
-nav ul li.menu-item:nth-child(2):hover {
-    color: #ff5733; /* MEN */
-    text-decoration-color: #ff5733;
-}
-
-nav ul li.menu-item:nth-child(3):hover {
-    color: #33c1ff; /* WOMEN */
-    text-decoration-color: #33c1ff;
-}
-
-nav ul li.menu-item:nth-child(4):hover {
-    color: #28a745; /* KIDS */
-    text-decoration-color: #28a745;
-}
-
-nav ul li.menu-item:nth-child(5):hover {
-    color: #ffc107; /* HOME & LIVING */
-    text-decoration-color: #ffc107;
-}
-
-nav ul li.menu-item:nth-child(6):hover {
-    color: #6f42c1; /* BEAUTY */
-    text-decoration-color: #6f42c1;
-}
-
-nav ul li.menu-item:nth-child(7):hover {
-    color: #f06ba9; /* STUDIO */
-    text-decoration-color: #f06ba9;
-}
-
-/* Hover effects for Profile, Wishlist, and Bag (no underlines) */
+/* Hover effects for Profile, Wishlist, and Bag */
 nav ul li.user-options:hover span {
-    color: #ff3e6c; /* Default hover color for Profile, Wishlist, and Bag */
-}
-
-nav ul li.user-options:nth-child(9):hover span { /* Wishlist */
-    color: rgb(19, 85, 216);
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 26px; /* Profile hover color */
-}
-
-nav ul li.user-options:nth-child(10):hover span { 
-    color: #e60d0d; /* Wishlist hover color */
-}
-nav ul li.user-options:nth-child(11):hover span { /* Bag */
-    color: #c508ff; /* Bag hover color */
+    color: rgb(176, 64, 250);
 }
 
 /* Badge for Studio */
@@ -121,19 +114,30 @@ nav ul li.user-options .option {
     flex-direction: column;
     align-items: center;
 }
+nav ul li.user-options a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #d580ff; /* Lighter purple */
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
 
 nav ul li.user-options img {
     margin-bottom: 5px;
     height: 25px;
     width: 25px;
+    filter: brightness(0) invert(1);
 }
 
 nav ul li.user-options span {
     font-size: 13px;
-    color: #555;
+    color: #fff;
 }
 
 nav ul li.user-options:hover span {
-    color: #ff3e6c;
-    /* No underline for Profile, Wishlist, and Bag */
+    color:rgb(176, 64, 250);
 }

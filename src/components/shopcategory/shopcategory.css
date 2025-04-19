@@ -1,0 +1,118 @@
+.shopcategory-banner {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin: 30px auto;
+}
+
+.shopcategory-banner img {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopcategory-banner2 {
+    width: 100%;
+    display: block;
+    margin: 30px auto;
+}
+
+.shopcategory-banner2 img {
+    width: 100%;
+    max-width: 1200px;
+    border:1px solid rgb(222, 220, 220);
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.shopcategory-banner2 img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.shopcategory-slider {
+    width: 100%;
+    display: block;
+    margin: 30px auto;
+}
+
+.shopcategory-indexsort {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopcategory-sort {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.shopcategory-indexsort p span {
+    font-weight: 600;
+    font-size: 20px;
+}
+.shopcategory-indexsort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.product-count {
+  font-size: 14px;
+  color: #333;
+}
+
+.product-count span {
+  font-weight: bold;
+}
+
+.shopcategory-sort {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.shopcategory-sort:hover {
+  color: #0056b3; /* Change color on hover */
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.shopcategory-sort:hover .dropdown-icon {
+  transform: rotate(180deg); /* Icon rotates on hover */
+}
+
+.shopcategory-products {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 80px;
+    max-width: 1250px;
+}
+
+.product-container {
+    margin: 50px auto 30px;
+}

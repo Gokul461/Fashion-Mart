@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.main{
+  background-color: burlywood;
+  width:1356px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding:30px;
+}
+.pop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+}
+.popular {
+  font-weight: 400;
+  color: rgb(81, 72, 17);
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+.section-title{
+  font-weight:700;
+  text-align: center;
+  color:#3d2004;
+  font-family: 'Merriweather', serif;
+}
+
+
+.dis-img1 {
+  margin-left: 10px;
+}
+
+.couponname {
+  font-family: 'Dancing Script', 'Handlee', sans-serif;
+  color: #6cc1aa;
+  font-weight: 500;
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+.imgcont{
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.disimg{
+  height: 90px;
+  width:1100px;
+}
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .couponname {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+
+  .dis-img1 {
+    margin-left: 5px; /* Adjust the image margin for smaller screens */
+  }
+
+  .pop {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+}

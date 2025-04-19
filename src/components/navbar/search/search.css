@@ -1,50 +1,65 @@
-/* Container for Search Bar */
+
 .search-bar-container {
+    position: relative;
     display: flex;
     align-items: center;
     border-radius: 4px;
-    background-color: #f4f4f4; /* Light gray background */
-    border: 1px solid #ddd; /* Border color */
-    padding: 5px 10px; /* Inner spacing */
-    width: 400px; /* Fixed width */
+    margin-right: 30px;
+    margin-left: 10px;
+    background-color: #f4f4f4; 
+    border: 1px solid #ddd; 
+    padding: 5px 10px;
+    width: 400px;
 }
 
-/* Input Field */
+
 .search-bar-input {
-    border: none; /* No border for input */
-    outline: none; /* Remove focus outline */
-    flex: 1; /* Takes remaining space */
-    font-size: 14px; /* Font size */
-    font-family: "Poppins", sans-serif; /* Font style */
-    background-color: transparent; /* Transparent background */
-    padding: 5px; /* Padding inside input */
-    color: #333; /* Text color */
+    border: none; 
+    outline: none;
+    flex: 1; 
+    font-size: 14px; 
+    font-family: "Poppins", sans-serif;
+    background-color: transparent; 
+    padding: 5px; 
+    color: #333; 
+    padding-right: 30px;
 }
 
-/* Input Placeholder Text */
 .search-bar-input::placeholder {
-    color: #aaa; /* Placeholder color */
-    font-size: 13px; /* Placeholder font size */
+    color: #aaa; 
+    font-size: 13px;
 }
 
-/* Search Icon */
 .search-bar-icon {
-    display: flex; /* Flex for alignment */
-    align-items: center; /* Vertical alignment */
-    justify-content: center; /* Horizontal alignment */
-    margin-left: 8px; /* Space between input and icon */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
 }
 
-/* Search Icon Image */
 .search-bar-icon img {
-    width: 20px; /* Icon size */
-    height: 20px; /* Icon size */
-    cursor: pointer; 
-    margin-right:10px;/* Pointer cursor for interactivity */
-    transition: transform 0.2s ease; /* Smooth scale effect */
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px; 
+    transition: transform 0.2s ease; 
 }
 
 /* Icon Hover Effect */
 .search-bar-icon img:hover {
-    transform: scale(1.2); /* Slightly enlarge icon on hover */
+    transform: scale(1.2);
+}
+
+.clear-icon {
+    position: absolute;
+    right: 10px; 
+    font-size: 20px;
+    color: #888;
+    top: 50%;
+    transform: translateY(-50%); 
+    cursor: pointer; 
+}
+
+.clear-icon:hover {
+    color: #333;
 }

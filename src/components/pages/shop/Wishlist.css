@@ -1,0 +1,40 @@
+.wishlist-background{
+  height: 70vh;
+}
+.wishlist-title {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .wishlist-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .wishlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .wishlist-card-img {
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .wishlist-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .wishlist-card-price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e63946;
+    margin-bottom: 1rem;
+  }
+  
