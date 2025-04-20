@@ -9,16 +9,16 @@ const Disslider = () => {
   return (
     <div className='container-fluid mb-3 menslider'>
       <div
-        id="carouselExampleIndicators"
+        id="dissliderCarousel"
         className="carousel slide"
         data-ride="carousel"
-        data-interval="1500"
+        data-interval="1000"
         style={{ maxWidth: '100vw', margin: '0' }}
       >
         <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#dissliderCarousel" data-slide-to="0" className="active"></li>
+          <li data-target="#dissliderCarousel" data-slide-to="1"></li>
+          <li data-target="#dissliderCarousel" data-slide-to="2"></li>
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -33,7 +33,7 @@ const Disslider = () => {
         </div>
         <a
           className="carousel-control-prev"
-          href="#carouselExampleIndicators"
+          href="#dissliderCarousel"
           role="button"
           data-slide="prev"
         >
@@ -42,7 +42,7 @@ const Disslider = () => {
         </a>
         <a
           className="carousel-control-next"
-          href="#carouselExampleIndicators"
+          href="#dissliderCarousel"
           role="button"
           data-slide="next"
         >

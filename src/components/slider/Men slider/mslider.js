@@ -16,29 +16,35 @@ const Menslider = () => {
         data-interval="1500"
         style={{ maxWidth: '100vw', width: '100%', margin: '0 auto' }}
       >
+        {/* Indicators */}
         <ol className="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
+
+        {/* Slides */}
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={menban3} alt="First slide" />
+            <img className="d-block w-100" src={menban3} alt="Slide 1" loading="lazy" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={menban2} alt="Second slide" />
+            <img className="d-block w-100" src={menban2} alt="Slide 2" loading="lazy" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={menban1} alt="Third slide" />
+            <img className="d-block w-100" src={menban1} alt="Slide 3" loading="lazy" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={menban4} alt="Fourth slide" />
+            <img className="d-block w-100" src={menban4} alt="Slide 4" loading="lazy" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={menban5} alt="Fifth slide" />
+            <img className="d-block w-100" src={menban5} alt="Slide 5" loading="lazy" />
           </div>
         </div>
+
+        {/* Controls */}
         <a
           className="carousel-control-prev"
           href="#carouselExampleIndicators"

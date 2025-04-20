@@ -9,35 +9,40 @@ const Paymentslider = () => {
   return (
     <div className='container mb-3 menslider my-5 bg-white'>
       <div
-        id="carouselExampleIndicators"
+        id="paymentCarousel"
         className="carousel slide"
         data-ride="carousel"
         data-interval="1500"
         style={{ maxWidth: '90vw', margin: '0 auto' }}
       >
+        {/* Indicators */}
         <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#paymentCarousel" data-slide-to="0" className="active"></li>
+          <li data-target="#paymentCarousel" data-slide-to="1"></li>
+          <li data-target="#paymentCarousel" data-slide-to="2"></li>
+          <li data-target="#paymentCarousel" data-slide-to="3"></li>
         </ol>
+
+        {/* Slides */}
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={pay1} alt="First slide" />
+            <img className="d-block w-100" src={pay1} alt="Slide 1" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={pay2} alt="Second slide" />
+            <img className="d-block w-100" src={pay2} alt="Slide 2" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={pay3} alt="Third slide" />
+            <img className="d-block w-100" src={pay3} alt="Slide 3" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={pay4} alt="Fourth slide" />
+            <img className="d-block w-100" src={pay4} alt="Slide 4" />
           </div>
         </div>
+
+        {/* Controls */}
         <a
           className="carousel-control-prev"
-          href="#carouselExampleIndicators"
+          href="#paymentCarousel"
           role="button"
           data-slide="prev"
         >
@@ -46,7 +51,7 @@ const Paymentslider = () => {
         </a>
         <a
           className="carousel-control-next"
-          href="#carouselExampleIndicators"
+          href="#paymentCarousel"
           role="button"
           data-slide="next"
         >

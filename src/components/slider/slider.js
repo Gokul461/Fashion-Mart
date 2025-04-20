@@ -9,16 +9,16 @@ const Slider = () => {
   return (
     <div className='container mb-3'>
       <div
-        id="carouselExampleIndicators"
+        id="mainCarousel"
         className="carousel slide"
         data-ride="carousel"
-        data-interval="1500" // Adjust slide interval (milliseconds)
+        data-interval="1500"
       >
         <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#mainCarousel" data-slide-to="0" className="active"></li>
+          <li data-target="#mainCarousel" data-slide-to="1"></li>
+          <li data-target="#mainCarousel" data-slide-to="2"></li>
+          <li data-target="#mainCarousel" data-slide-to="3"></li>
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -34,9 +34,10 @@ const Slider = () => {
             <img className="d-block w-100" src={Slider4} alt="Fourth slide" />
           </div>
         </div>
+
         <a
           className="carousel-control-prev"
-          href="#carouselExampleIndicators"
+          href="#mainCarousel"
           role="button"
           data-slide="prev"
         >
@@ -45,7 +46,7 @@ const Slider = () => {
         </a>
         <a
           className="carousel-control-next"
-          href="#carouselExampleIndicators"
+          href="#mainCarousel"
           role="button"
           data-slide="next"
         >

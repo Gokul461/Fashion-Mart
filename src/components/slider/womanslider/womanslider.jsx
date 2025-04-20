@@ -9,17 +9,17 @@ const Womanslider = () => {
   return (
     <div className='container mb-3 menslider'>
       <div
-        id="carouselExampleIndicators"
+        id="womansliderCarousel"
         className="carousel slide"
         data-ride="carousel"
         data-interval="1500"
         style={{ maxWidth: '90vw', margin: '0 auto' }}
       >
         <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#womansliderCarousel" data-slide-to="0" className="active"></li>
+          <li data-target="#womansliderCarousel" data-slide-to="1"></li>
+          <li data-target="#womansliderCarousel" data-slide-to="2"></li>
+          <li data-target="#womansliderCarousel" data-slide-to="3"></li>
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -37,7 +37,7 @@ const Womanslider = () => {
         </div>
         <a
           className="carousel-control-prev"
-          href="#carouselExampleIndicators"
+          href="#womansliderCarousel"
           role="button"
           data-slide="prev"
         >
@@ -46,7 +46,7 @@ const Womanslider = () => {
         </a>
         <a
           className="carousel-control-next"
-          href="#carouselExampleIndicators"
+          href="#womansliderCarousel"
           role="button"
           data-slide="next"
         >

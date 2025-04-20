@@ -14,11 +14,11 @@ const Womanswiper = () => {
     centerPadding: "0", // Ensure no padding around slides
     dots: true, // Show navigation dots
     infinite: true, // Loop through slides
-    speed: 500, // Transition speed
+    speed: 1000, // Transition speed
     slidesToShow: 3, // Show 3 slides at a time
     slidesToScroll: 1, // Scroll one slide at a time
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // Set autoplay delay
+    autoplaySpeed: 2000, // Set autoplay delay
     arrows: true, // Show navigation arrows
   };
 
