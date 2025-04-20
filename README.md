@@ -138,39 +138,62 @@ Wishlist: Save your favorite items for later.
 User Account: Sign up, login, and manage your account details.
 
 ## 📸 Screenshots
-Homepage:
+
+### Homepage:
+
+
 ![image](https://github.com/user-attachments/assets/5fb52def-1329-458e-b587-8eb12e81856d)
 
-Mordern designs:
+ 
+### Mordern designs:
+
+
 ![image](https://github.com/user-attachments/assets/345050f3-5792-46aa-91b2-67f08f34f2b6)
 ![image](https://github.com/user-attachments/assets/7611560b-2607-4170-ab05-393048a991c4)
 ![image](https://github.com/user-attachments/assets/9e4d125e-515b-4ec3-960b-a716e3a8e280)
 ![image](https://github.com/user-attachments/assets/6b35e6a7-49e5-4cf2-808d-0bffe3da3106)
 
-Search:
+
+### Search:
+
+
 ![image](https://github.com/user-attachments/assets/94338bba-18f8-4add-8c01-e8192a5de837)
 
-Login:
+
+### Login:
+
+
 ![image](https://github.com/user-attachments/assets/983e354c-6a8f-49d3-8122-9afbe166b45e)
 
 
-Product Page:
+### Product Page:
+
+
 ![image](https://github.com/user-attachments/assets/2660918d-1f18-454e-8dfc-5180324f4ce4)
 ![image](https://github.com/user-attachments/assets/c9ff1a76-a7ad-4fdd-a7bd-e5078c710795)
 ![image](https://github.com/user-attachments/assets/e54373e1-26eb-41f8-b307-d0caa4dbdf4b)
 ![image](https://github.com/user-attachments/assets/a370121c-0624-4cc0-a13e-e7c750055a2f)
 
-Wishlist:
+
+### Wishlist:
+
+
 ![image](https://github.com/user-attachments/assets/e1ef0991-b598-4cf7-bf61-9e3e420d1453)
 
 
-Cart:
+### Cart:
+
+
 ![image](https://github.com/user-attachments/assets/aa0ef227-255f-4148-b06e-51cc108210b6)
 ![image](https://github.com/user-attachments/assets/dbba0075-aa8d-4e6d-92ab-f1885477f1b9)
 ![image](https://github.com/user-attachments/assets/1f31864e-5054-4213-88ed-05a987a28cd9)
 
-Footer: 
+
+### Footer: 
+
+
 ![image](https://github.com/user-attachments/assets/b4a7fa69-b959-47fd-806f-fd8002e77917)
+
 
 ## 📞 Contact
 For any queries or suggestions, feel free to contact us:
@@ -181,8 +204,12 @@ Thank you for visiting Fashion Mart! We hope you enjoy shopping with us.
 
 Happy Shopping! 🛍️👗✨
 
+## Demo:
+```
 
+https://fashionmart-mmugotf9y-gokulnaths-projects-42b00bad.vercel.app/
 
+```
 ## This README file includes:
 
 - **Firebase Authentication** setup and error handling.
