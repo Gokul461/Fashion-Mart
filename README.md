@@ -138,11 +138,13 @@ Wishlist: Save your favorite items for later.
 User Account: Sign up, login, and manage your account details.
 
 ## 📸 Screenshots
-Homepage:
+
+### Homepage:
 
 
 ![image](https://github.com/user-attachments/assets/5fb52def-1329-458e-b587-8eb12e81856d)
 
+ 
 ### Mordern designs:
 
 
@@ -151,10 +153,12 @@ Homepage:
 ![image](https://github.com/user-attachments/assets/9e4d125e-515b-4ec3-960b-a716e3a8e280)
 ![image](https://github.com/user-attachments/assets/6b35e6a7-49e5-4cf2-808d-0bffe3da3106)
 
+
 ### Search:
 
 
 ![image](https://github.com/user-attachments/assets/94338bba-18f8-4add-8c01-e8192a5de837)
+
 
 ### Login:
 
@@ -170,6 +174,7 @@ Homepage:
 ![image](https://github.com/user-attachments/assets/e54373e1-26eb-41f8-b307-d0caa4dbdf4b)
 ![image](https://github.com/user-attachments/assets/a370121c-0624-4cc0-a13e-e7c750055a2f)
 
+
 ### Wishlist:
 
 
@@ -183,10 +188,12 @@ Homepage:
 ![image](https://github.com/user-attachments/assets/dbba0075-aa8d-4e6d-92ab-f1885477f1b9)
 ![image](https://github.com/user-attachments/assets/1f31864e-5054-4213-88ed-05a987a28cd9)
 
+
 ### Footer: 
 
 
 ![image](https://github.com/user-attachments/assets/b4a7fa69-b959-47fd-806f-fd8002e77917)
+
 
 ## 📞 Contact
 For any queries or suggestions, feel free to contact us:
