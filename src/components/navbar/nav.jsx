@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../assets/images/logo3.jpeg';
 import Bag_Logo from '../../assets/images/bag.png';
-import SearchBar from './search/search';
+import SearchBar from './Search/search';
 import ProfileDropdown from './profile/profileDropdown';
 import './nav.css';
 import {Link} from 'react-router-dom';

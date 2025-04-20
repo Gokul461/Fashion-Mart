@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './item.css';
 import { useContext } from 'react';
-import { ShopContext } from '../context/shopcontext'; // Import the ShopContext
+import { ShopContext } from '../Context/shopcontext'; // Import the ShopContext
 import { toast } from 'react-toastify'; // Import toast
-import { useAuth } from '../../components/context/AuthProvider';
+import { useAuth } from '../Context/AuthProvider';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 const Item = ({ id, name, image, new_price, old_price }) => {
   const { addToCart, toggleFavorite, favorites } = useContext(ShopContext); // Access addToCart & toggleFavorite

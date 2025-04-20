@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop"; 
 import Nav from "./components/navbar/nav";
 import Shop from "./components/pages/shop/shop";
-import Footer from "./components/footer/footer";
+import Footer from "./components/Footer/footer";
 import ShopCategory from "./components/shopcategory/shopcategory";
 import men_banner from "./assets/images/menbanner3.png";
 import women_banner from "./assets/images/womanbanner.png";
@@ -29,7 +29,7 @@ import Giftcards from "./components/navbar/profile/ProfileMenus/GiftCards/Giftca
 import Coupons from "./components/navbar/profile/ProfileMenus/Coupons/Coupons";
 import Contact from "./components/navbar/profile/ProfileMenus/Contact/Contact";
 import Wishlist from "./components/pages/shop/Wishlist";
-import  SerachRender from "./components/navbar/search/SerachRender";
+import  SerachRender from "./components/navbar/Search/SerachRender";
 function App() {
   return (
     <div className="bg-white">

@@ -4,8 +4,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './itemnew.css';  // Make sure this has your card styling
 import { toast } from 'react-toastify';
 import { useContext } from 'react';
-import { ShopContext } from '../context/shopcontext';
-import { useAuth } from '../../components/context/AuthProvider';
+import { ShopContext } from '../Context/shopcontext';
+import { useAuth } from '../../components/Context/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 const ProductCard = ({ id, name, image, new_price, old_price }) => {
   const { addToCart, toggleFavorite, favorites } = useContext(ShopContext); 

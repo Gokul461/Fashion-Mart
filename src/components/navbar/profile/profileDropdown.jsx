@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./profileDropdown.css";
-import { useAuth } from "../../context/AuthProvider";
+import { useAuth } from "../../Context/AuthProvider";
 import { signOut } from "firebase/auth";
 import { auth } from "../../Firebase";
 import { toast } from "react-toastify";

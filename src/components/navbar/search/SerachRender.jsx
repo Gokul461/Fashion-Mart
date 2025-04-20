@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { ShopContext } from '../../context/shopcontext';
+import { ShopContext } from '../../Context/shopcontext';
 import { toast } from 'react-toastify';
 import './search.css';
 

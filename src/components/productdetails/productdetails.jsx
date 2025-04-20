@@ -4,8 +4,8 @@ import all_products from "../../assets/images/all_product";
 import "./productdetails.css";
 import { toast } from "react-toastify";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { ShopContext } from "../../components/context/shopcontext";
-import { useAuth } from "../../components/context/AuthProvider";
+import { ShopContext } from "../../components/Context/shopcontext";
+import { useAuth } from "../../components/Context/AuthProvider";
 import { useNavigate } from "react-router-dom"; 
 const ProductDetails = () => {
 
