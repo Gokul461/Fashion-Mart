@@ -1,40 +1,74 @@
-.wishlist-background{
-  height: 70vh;
+.wishlist-background {
+  padding: 2rem;
+  min-height: 70vh;
+  background-color: #f9f9f9;
 }
+
 .wishlist-title {
-    font-weight: 600;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .wishlist-card {
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .wishlist-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .wishlist-card-img {
-    height: 240px;
-    object-fit: cover;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .wishlist-card-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 0.5rem;
-  }
-  
-  .wishlist-card-price {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #e63946;
-    margin-bottom: 1rem;
-  }
-  
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.wishlist-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-card-img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.wishlist-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin: 1rem 0 0.5rem;
+}
+
+.wishlist-card-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+.button-remove {
+  width: 200px;
+  font-size: 14px;
+  height: 50px;
+  background-color: #fa812b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.button-add {
+  width: 200px;
+  font-size: 16px;
+  height: 50px;
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  border-radius: 8px;
+}

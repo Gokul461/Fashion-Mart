@@ -60,7 +60,7 @@ const Navigate = useNavigate();
           <span className="ajio_card__new-price">₹{new_price}</span>
           {old_price && <span className="ajio_card__old-price">₹{old_price}</span>}
         </div>
-        <button className="ajio_card__cta but" onClick={handleAddToCart}>Add to Cart</button>
+        <button className="ajio_card__cta addbtn" onClick={handleAddToCart}>Add to Cart</button>
       </div>
     </div>
   );

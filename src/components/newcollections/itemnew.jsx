@@ -69,7 +69,7 @@ const Navigate = useNavigate();
           )}
         </div>
 
-        <button className="product-card__btn btn btn-primary w-100 mt-3" onClick={handleAddToCart}>
+        <button className="product-card__btn btn w-100 mt-3" onClick={handleAddToCart}>
           <i className="bi bi-cart-plus me-1"></i> Add to Cart
         </button>
       </div>

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { ShopContext } from '../../context/shopcontext';
 import { Link } from 'react-router-dom';
-import { Button, Card, Container, Row, Col } from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './Wishlist.css'; // Custom styling
-
+import './Wishlist.css';
+import { toast } from 'react-toastify';
 const Wishlist = () => {
   const { favorites, all_product, toggleFavorite, addToCart } = useContext(ShopContext);
 
@@ -32,22 +32,20 @@ const Wishlist = () => {
                   <Card.Title className="wishlist-card-title">{product.name}</Card.Title>
                   <Card.Text className="wishlist-card-price">₹{product.new_price}</Card.Text>
 
-                  <div className="mt-auto d-flex justify-content-between">
-                    <Button
-                      variant="outline-danger"
-                      size="sm"
-                      onClick={() => toggleFavorite(product.id)}
+                  <div className="mt-auto d-flex justify-content-between gap-2">
+                    <button
+                      className="button-remove"
+                      onClick={() => {toggleFavorite(product.id);toast.error('Removed from wishlist!',{position:"bottom-right",theme:"dark"})}}
                     >
                       <i className="bi bi-heart-fill"></i> Remove
-                    </Button>
+                    </button>
 
-                    <Button
-                      variant="outline-success"
-                      size="sm"
-                      onClick={() => addToCart(product)}
+                    <button
+                      className="button-add"
+                      onClick={() => {addToCart(product);toast.success('Added to cart!',{position:"bottom-right",theme:"dark"});}}
                     >
                       <i className="bi bi-cart-plus"></i> Add
-                    </Button>
+                    </button>
                   </div>
                 </Card.Body>
               </Card>

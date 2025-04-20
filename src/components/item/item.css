@@ -10,12 +10,12 @@
     flex-direction: column;
     align-items: center;
     opacity:0.9;
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scale and shadow */
+    backdrop-filter: blur(10px);
+   
 }
 
 .ajio_card:hover {
-    transform: scale(1.05); /* Slight scale effect on hover */
+    transform: scale(1); /* Slight scale effect on hover */
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
     opacity:1; /* Enhance shadow on hover */
 }
@@ -53,7 +53,7 @@
     font-size: 17px;
     font-weight:600;
     color: #333;
-    margin: 15px 0 10px ;
+    
 }
 
 .ajio_card__new-price {
@@ -80,8 +80,54 @@
     cursor: pointer;
 }
 .ajio_card__details button{
-    margin-top:5px;
+    margin-top:5p
 }
 .ajio_card__details button:hover{
 background-color: #cb791c;
+}.ajio_card {
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px 0 20px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Make sure content is pushed between top and bottom */
+  opacity: 0.9;
+  backdrop-filter: blur(10px);
+}
+
+.ajio_card__details {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Makes this section take remaining vertical space */
+  justify-content: space-between; /* Push price-wrapper to top and button to bottom */
+}
+
+.ajio_card__price-wrapper {
+  margin-top: 10px;
+}
+
+.ajio_card__cta {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: auto; 
+
+}
+.addbtn{
+    width:200px;
+    margin-left:18px;
+    margin-top:5px;
+}
+.ajio_card__cta:hover {
+  background-color: #cb791c;
 }

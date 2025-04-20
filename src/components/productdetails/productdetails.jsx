@@ -8,13 +8,16 @@ import { ShopContext } from "../../components/context/shopcontext";
 import { useAuth } from "../../components/context/AuthProvider";
 import { useNavigate } from "react-router-dom"; 
 const ProductDetails = () => {
+
   const { id } = useParams();
   const product = all_products
     ? all_products.find((item) => item.id === parseInt(id))
     : null;
+
   const { addToCart, toggleFavorite, favorites } = useContext(ShopContext);
 
-  const isFavorited = favorites.includes(id);
+  const isFavorited = favorites.includes(parseInt(id));
+
 
   const handleAddToCart = () => {
     if (!userEmail) {
@@ -38,18 +41,23 @@ const ProductDetails = () => {
 const { userEmail } = useAuth(); 
 const Navigate = useNavigate(); 
   const handleFavoriteClick = () => {
-    toggleFavorite(id);
-    if (!userEmail) {
-      toast.error('Please log in to add item to wishlist', { position: 'bottom-right', theme: 'dark' });
-      Navigate('/login'); 
-    }else{
-      if (!isFavorited) {
-        toast.success('Added to Wishlist', { position: 'bottom-right',theme: 'dark' }); 
-      } else {
-        toast.error('Removed from Wishlist', { position: 'bottom-right', theme: 'dark' });
-      }
+  if (!userEmail) {
+    toast.error('Please log in to add item to wishlist', { position: 'bottom-right', theme: 'dark' });
+    Navigate('/login');
+  } else {
+    const productId = parseInt(id); 
+    toggleFavorite(productId);
+
+    const isNowFavorited = favorites.includes(productId);
+
+    if (!isNowFavorited) {
+      toast.success('Added to Wishlist', { position: 'bottom-right', theme: 'dark' });
+    } else {
+      toast.error('Removed from Wishlist', { position: 'bottom-right', theme: 'dark' });
     }
-    };
+  }
+};
+
   if (!product) {
     return <p>Product not found!</p>;
   }
