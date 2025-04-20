@@ -161,7 +161,7 @@ Product Page:
 ![image](https://github.com/user-attachments/assets/a370121c-0624-4cc0-a13e-e7c750055a2f)
 
 Wishlist:
-![image](https://github.com/user-attachments/assets/de1c4975-aedc-4c98-9cf3-de6de2b00d90)
+![image](https://github.com/user-attachments/assets/e1ef0991-b598-4cf7-bf61-9e3e420d1453)
 
 
 Cart:
