@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ShopContext } from '../../Context/shopcontext';
+import { ShopContext } from '../../Context/shopContext';
 import './cart.css';
 import { toast } from "react-toastify";
 import Emptycart from '../../../assets/images/emptycart.avif';  // Ensure the correct path

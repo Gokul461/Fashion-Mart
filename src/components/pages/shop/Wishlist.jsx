@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ShopContext } from '../../Context/shopcontext';
+import { ShopContext } from '../../Context/shopContext';
 import { Link } from 'react-router-dom';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
