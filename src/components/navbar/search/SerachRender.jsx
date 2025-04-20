@@ -6,7 +6,7 @@ import './search.css';
 
 const SearchRender = () => {
   const location = useLocation();
-  const { filteredProducts = [] } = location.state || {}; // Default to an empty array if no products
+  const { filteredProducts = [] } = location.state || {}; 
   const { addToCart, favorites, toggleFavorite } = useContext(ShopContext);
 
   const handleAddToCart = (product) => {
