@@ -204,8 +204,12 @@ Thank you for visiting Fashion Mart! We hope you enjoy shopping with us.
 
 Happy Shopping! 🛍️👗✨
 
+## Demo:
+```
 
+https://fashionmart-mmugotf9y-gokulnaths-projects-42b00bad.vercel.app/
 
+```
 ## This README file includes:
 
 - **Firebase Authentication** setup and error handling.
