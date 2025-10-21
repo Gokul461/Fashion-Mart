@@ -4,7 +4,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './itemnew.css'; // Make sure this has your card styling
 import { toast } from 'react-toastify';
 import { useContext } from 'react';
-import { ShopContext } from '../Context/shopContext';
+import { ShopContext } from '../Context/shopContextProvider';
 import { useAuth } from '../../components/Context/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 
