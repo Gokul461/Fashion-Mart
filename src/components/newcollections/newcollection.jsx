@@ -17,6 +17,7 @@ const NewCollection = () => {
   };
 
   return (
+    <section id="collection-section">
     <div className="container mx-auto mt-10 px-6 pb-20">
       <h1 className="new-collection-title">
        <strong className="fw-bold">Future</strong> Collection
@@ -74,6 +75,7 @@ const NewCollection = () => {
         </button>
       </div>
     </div>
+    </section>
   );
 };
 

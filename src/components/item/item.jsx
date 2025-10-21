@@ -7,34 +7,45 @@ import { ShopContext } from '../Context/shopContext'; // Import the ShopContext
 import { toast } from 'react-toastify'; // Import toast
 import { useAuth } from '../Context/AuthProvider';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 const Item = ({ id, name, image, new_price, old_price }) => {
   const { addToCart, toggleFavorite, favorites } = useContext(ShopContext); // Access addToCart & toggleFavorite
- 
-  const isFavorited = favorites.includes(id);
-const { userEmail } = useAuth(); 
-const Navigate = useNavigate(); 
+  const { user } = useAuth(); // Get the logged-in user
+  const navigate = useNavigate(); // For navigation
+
+  const isFavorited = favorites.some((item) => item.id === id); // Check if the item is in the favorites list
+
   const handleFavoriteClick = () => {
-    toggleFavorite(id);
-    if (!userEmail) {
-      toast.error('Please log in to add item to wishlist', { position: 'bottom-right', theme: 'dark' });
-      Navigate('/login'); 
-    }else{
-      if (!isFavorited) {
-        toast.success('Added to Wishlist', { position: 'bottom-right',theme: 'dark' }); 
-      } else {
-        toast.error('Removed from Wishlist', { position: 'bottom-right', theme: 'dark' });
-      }
+    if (!user) {
+      // If the user is not logged in, navigate to the login page
+      toast.error('Please log in to manage your wishlist', { position: 'bottom-right', theme: 'dark' });
+      navigate('/login');
+      return; // Exit the function early
     }
-    };
+
+    // Toggle the favorite status
+    toggleFavorite({ id, name, image, new_price, old_price });
+
+    // Show appropriate toast notifications
+    if (!isFavorited) {
+      toast.success('Added to Wishlist', { position: 'bottom-right', theme: 'dark' });
+    } else {
+      toast.error('Removed from Wishlist', { position: 'bottom-right', theme: 'dark' });
+    }
+  };
 
   const handleAddToCart = () => {
-    if (!userEmail) {
+    if (!user) {
+      // If the user is not logged in, navigate to the login page
       toast.error('Please log in to add items to the cart', { position: 'bottom-right', theme: 'dark' });
-      Navigate('/login'); 
-    }else{
+      navigate('/login');
+      return; // Exit the function early
+    }
+
+    // Add the item to the cart
     addToCart({ id, name, image, new_price, old_price });
-    toast.success(`Added to cart!`, { position: 'bottom-right',theme: 'dark' });
-  }};
+    toast.success(`Added to cart!`, { position: 'bottom-right', theme: 'dark' });
+  };
 
   return (
     <div className='ajio_card'>

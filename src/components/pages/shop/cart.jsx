@@ -4,9 +4,13 @@ import './cart.css';
 import { toast } from "react-toastify";
 import Emptycart from '../../../assets/images/emptycart.avif';  // Ensure the correct path
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../Context/AuthProvider'; // Import useAuth hook
+
 const Cart = () => {
   const { cart, setCart } = useContext(ShopContext);
+  const { user } = useAuth(); // Get the logged-in user
   const navigate = useNavigate();
+
   // Function to handle quantity change
   const updateQuantity = (itemId, delta) => {
     const updatedCart = cart.map(item => {
@@ -19,13 +23,20 @@ const Cart = () => {
     setCart(updatedCart); // Update the cart state
   };
 
-
   const handleBuyNow = () => {
+    if (!user) {
+      // Navigate to login page if the user is not logged in
+      toast.info("Please log in to place an order.", { position: "bottom-right", theme: "dark" });
+      navigate('/login');
+      return; // Exit the function early
+    }
+
+    // Place the order if the user is logged in
     toast.success("Order placed successfully!");
-      setCart([]); // Clear the cart
-      navigate("/ordersuccess"); // Redirect to order success page
-    };
-    
+    setCart([]); // Clear the cart
+    navigate("/ordersuccess"); // Redirect to order success page
+  };
+
   // Function to handle item removal
   const removeItem = (itemId) => {
     const updatedCart = cart.filter(item => item.id !== itemId); // Remove item with the matching id
@@ -41,6 +52,7 @@ const Cart = () => {
       </div>
     );
   }
+
   const totalPrice = cart.reduce((total, item) => {
     const price = parseFloat(item.new_price); 
     return total + (price * (item.quantity || 1));
@@ -61,7 +73,7 @@ const Cart = () => {
 
               {/* Quantity Controls */}
               <div className="cart-item-quantity">
-                <button className="m-2"onClick={() => updateQuantity(item.id, -1)}>-</button>
+                <button className="m-2" onClick={() => updateQuantity(item.id, -1)}>-</button>
                 <span>{item.quantity || 1}</span> {/* Fallback to 1 if quantity is undefined */}
                 <button className="m-2" onClick={() => updateQuantity(item.id, 1)}>+</button>
               </div>

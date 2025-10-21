@@ -6,7 +6,7 @@ export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
   const [cart, setCart] = useState([]);
-  const [favorites, setFavorites] = useState([]); // <-- New: Favorites state
+  const [favorites, setFavorites] = useState([]); // Favorites stored as objects
 
   // Add product to cart
   const addToCart = (product) => {
@@ -36,13 +36,28 @@ const ShopContextProvider = (props) => {
     setCart(updatedCart);
   };
 
+  // Add product to favorites
+  const addToFavorites = (product) => {
+    const existingProduct = favorites.find((item) => item.id === product.id);
+    if (!existingProduct) {
+      setFavorites((prevFavorites) => [...prevFavorites, product]);
+    }
+  };
+
+  // Remove product from favorites
+  const removeFromFavorites = (productId) => {
+    const updatedFavorites = favorites.filter((item) => item.id !== productId);
+    setFavorites(updatedFavorites);
+  };
+
   // Toggle favorite (wishlist) status
-  const toggleFavorite = (productId) => {
-    setFavorites((prevFavorites) =>
-      prevFavorites.includes(productId)
-        ? prevFavorites.filter((id) => id !== productId)
-        : [...prevFavorites, productId]
-    );
+  const toggleFavorite = (product) => {
+    const existingProduct = favorites.find((item) => item.id === product.id);
+    if (existingProduct) {
+      removeFromFavorites(product.id);
+    } else {
+      addToFavorites(product);
+    }
   };
 
   const contextValue = {
@@ -52,8 +67,10 @@ const ShopContextProvider = (props) => {
     updateQuantity,
     removeFromCart,
     setCart,
-    favorites,         // <-- Provide favorites list
-    toggleFavorite     // <-- Provide toggle function
+    favorites,         // Provide favorites list
+    addToFavorites,    // Add product to favorites
+    removeFromFavorites, // Remove product from favorites
+    toggleFavorite,    // Toggle favorite status
   };
 
   return (
