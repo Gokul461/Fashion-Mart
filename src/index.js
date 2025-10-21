@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ShopContextProvider from './components/Context/shopContextProvider';
+import ShopContextProv from './components/Context/shopContextProvider';
 import AuthProvider from './components/Context/AuthProvider';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ShopContextProvider>
+  <ShopContextProv>
     <AuthProvider>
     <App/>
     </AuthProvider>
-  </ShopContextProvider>
+  </ShopContextProv>
 );
 
 // If you want to start measuring performance in your app, pass a function
