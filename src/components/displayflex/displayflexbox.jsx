@@ -1,5 +1,5 @@
 import React from 'react'
-import './displayfelx.css'
+import './displayflexbox.css'
 import dis1 from '../../assets/images/bodyimg1.png'
 import dis2 from '../../assets/images/bodyimg2.png'
 import dis3 from '../../assets/images/bodyimg3.png'
