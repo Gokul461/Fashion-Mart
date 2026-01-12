@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop"; 
 import Nav from "./components/navbar/nav";
 import Shop from "./components/pages/shop/shop";
-import Footer from "./components/Footer/footer";
+import Footer from "./components/Footerbar/footer";
 import ShopCategory from "./components/shopcategory/shopcategory";
 // import men_banner from "./assets/images/menbanner3.png";
 // import women_banner from "./assets/images/womanbanner.png";
