@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 // import { Link } from 'react-router-dom';
-import Item from "../item/item";
+import Item from "../itempart/item";
 import "./shopcategory.css";
 import savingimg from "../../assets/images/discountimg2.jpg.png";
 import { ShopContext } from "../contextprovider/shopContextProvider";
 import Dropdown_icon from "../../assets/images/dropdown_icon.png";
-import Dis from "../slider/disslide";
+import Dis from "../sliderpart/disslide";
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
 

@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
-import Hero from '../../Hero/hero';
-import Popular from '../../popular/popular';
-import Newcollection from '../../newcollections/newcollection';
-import Slider from '../../slider/slider';
-import Womanslider from '../../slider/womanslider/womanslider';
-import Menslider from '../../slider/Men slider/mslider';
-import Swiper from '../../swiper/swiper';
-import Womanswiper from '../../swiper/womanswiper';
+import Hero from '../../Heropart/hero';
+import Popular from '../../popularpart/popular';
+import Newcollection from '../../newcollectionspart/newcollection';
+import Slider from '../../sliderpart/slider';
+import Womanslider from '../../sliderpart/womanslider/womanslider';
+import Menslider from '../../sliderpart/Men slider/mslider';
+import Swiper from '../../swiperpart/swiper';
+import Womanswiper from '../../swiperpart/womanswiper';
 import Bodyimg from '../../displayFlex/displayflexbox';
 
 const Shop = () => {

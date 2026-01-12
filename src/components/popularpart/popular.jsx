@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from '../item/item';
+import Item from '../itempart/item';
 import data_product from '../../assets/images/data'; 
 import savingimg from '../../assets/images/saving.png'; 
 import './popular.css';
