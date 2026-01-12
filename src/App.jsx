@@ -29,7 +29,7 @@ import Giftcards from "./components/navbar/profile/ProfileMenus/GiftCards/Giftca
 import Coupons from "./components/navbar/profile/ProfileMenus/Coupons/Coupons";
 import Contact from "./components/navbar/profile/ProfileMenus/Contact/Contact";
 import Wishlist from "./components/pages/shop/Wishlist";
-import  SerachRender from "./components/navbar/Search/SearchRender";
+import  SearchRender from "./components/navbar/Searchpart/SearchRender";
 function App() {
   return (
     <div className="bg-white">
@@ -94,7 +94,7 @@ function App() {
               />
             }
           />
-          <Route path = "/search-results" element={<SerachRender />} />
+          <Route path = "/search-results" element={<SearchRender />} />
           <Route path="/ordersuccess" element={<Ordersuccess />} />
           <Route path="/login" element={<Login />} />
           <Route path="/wishlist" element={<Wishlist />} />
