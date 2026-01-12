@@ -7,7 +7,7 @@ import Womanslider from '../../sliderpart/womanslider/womanslider';
 import Menslider from '../../sliderpart/Men slider/mslider';
 import Swiper from '../../swiperpart/swiper';
 import Womanswiper from '../../swiperpart/womanswiper';
-import Bodyimg from '../../displayFlex/displayflexbox';
+import Bodyimg from '../../displayflex/displayflexbox';
 
 const Shop = () => {
   const sliderRef = useRef(null); 
