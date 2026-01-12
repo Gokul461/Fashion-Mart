@@ -1,6 +1,12 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+} from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../Firebase.js";
+import { ShopContext } from "./shopContextProvider";
 
 const AuthContext = createContext();
 
@@ -17,6 +23,9 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // ✅ useContext MUST be inside component
+  const { clearUserData } = useContext(ShopContext);
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -27,15 +36,22 @@ const AuthProvider = ({ children }) => {
         setUser(null);
         setUserEmail(null);
         localStorage.removeItem("userEmail");
+
+        // ✅ clear data when auth state becomes null
+        clearUserData();
       }
       setLoading(false);
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [clearUserData]);
 
   const logout = async () => {
     await signOut(auth);
+
+    // ✅ clear cart & wishlist
+    clearUserData();
+
     setUser(null);
     setUserEmail(null);
     localStorage.removeItem("userEmail");
@@ -68,4 +84,5 @@ const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
 export default AuthProvider;

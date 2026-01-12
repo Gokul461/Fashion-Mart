@@ -1,81 +1,93 @@
-import React, { createContext, useState } from 'react';
-import all_product from '../../assets/images/all_product';
+import React, { createContext, useState } from "react";
+import all_product from "../../assets/images/all_product";
 
 // Create the context
 export const ShopContext = createContext(null);
 
-const ShopContextProvider = (props) => {
+const ShopContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [favorites, setFavorites] = useState([]); // Favorites stored as objects
+  const [favorites, setFavorites] = useState([]); // stores PRODUCT OBJECTS
+const clearUserData = () => {
+  setCart([]);
+  setFavorites([]);
+};
 
-  // Add product to cart
+  // ---------------- CART LOGIC ----------------
+
   const addToCart = (product) => {
-    const existingProduct = cart.find((item) => item.id === product.id);
+    const existingProduct = cart.find(
+      (item) => item.id === product.id
+    );
+
     if (existingProduct) {
-      updateQuantity(existingProduct.id, 1);
+      setCart((prev) =>
+        prev.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
     } else {
-      setCart((prevCart) => [...prevCart, { ...product, quantity: 1 }]);
+      setCart((prev) => [...prev, { ...product, quantity: 1 }]);
     }
   };
 
-  // Update product quantity in the cart
   const updateQuantity = (productId, delta) => {
-    const updatedCart = cart.map((item) => {
-      if (item.id === productId) {
-        const newQuantity = Math.max(1, item.quantity + delta);
-        return { ...item, quantity: newQuantity };
-      }
-      return item;
-    });
-    setCart(updatedCart);
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === productId
+          ? {
+              ...item,
+              quantity: Math.max(1, item.quantity + delta),
+            }
+          : item
+      )
+    );
   };
 
-  // Remove product from cart
   const removeFromCart = (productId) => {
-    const updatedCart = cart.filter((item) => item.id !== productId);
-    setCart(updatedCart);
+    setCart((prev) =>
+      prev.filter((item) => item.id !== productId)
+    );
   };
 
-  // Add product to favorites
-  const addToFavorites = (product) => {
-    const existingProduct = favorites.find((item) => item.id === product.id);
-    if (!existingProduct) {
-      setFavorites((prevFavorites) => [...prevFavorites, product]);
-    }
-  };
+  // ---------------- WISHLIST LOGIC ----------------
 
-  // Remove product from favorites
-  const removeFromFavorites = (productId) => {
-    const updatedFavorites = favorites.filter((item) => item.id !== productId);
-    setFavorites(updatedFavorites);
-  };
-
-  // Toggle favorite (wishlist) status
   const toggleFavorite = (product) => {
-    const existingProduct = favorites.find((item) => item.id === product.id);
-    if (existingProduct) {
-      removeFromFavorites(product.id);
-    } else {
-      addToFavorites(product);
-    }
+    setFavorites((prev) => {
+      const exists = prev.find(
+        (item) => item.id === product.id
+      );
+
+      if (exists) {
+        // remove
+        return prev.filter(
+          (item) => item.id !== product.id
+        );
+      } else {
+        // add
+        return [...prev, product];
+      }
+    });
   };
+
+  // ---------------- CONTEXT VALUE ----------------
 
   const contextValue = {
     all_product,
     cart,
+    setCart,
     addToCart,
     updateQuantity,
     removeFromCart,
-    setCart,
-    favorites,         // Provide favorites list
-    addToFavorites,    // Add product to favorites
-    removeFromFavorites, // Remove product from favorites
-    toggleFavorite,    // Toggle favorite status
+    favorites,
+    toggleFavorite,
+    clearUserData,
   };
 
   return (
     <ShopContext.Provider value={contextValue}>
-      {props.children}
+      {children}
     </ShopContext.Provider>
   );
 };

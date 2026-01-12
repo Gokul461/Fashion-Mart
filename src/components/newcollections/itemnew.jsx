@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './itemnew.css'; // Make sure this has your card styling
 import { toast } from 'react-toastify';
-import { useContext } from 'react';
 import { ShopContext } from '../Context/shopContextProvider';
 import { useAuth } from '../../components/Context/AuthProvider';
 import { useNavigate } from 'react-router-dom';
@@ -16,21 +15,24 @@ const ProductCard = ({ id, name, image, new_price, old_price }) => {
   const isFavorited = favorites.some((item) => item.id === id); // Check if the product is in the favorites list
 
   const handleFavoriteClick = () => {
+    console.log('User:', user);
+    console.log('Favorites before toggle:', favorites);
+
     if (!user) {
-      // If the user is not logged in, navigate to the login page
       toast.error('Please log in to manage your wishlist', { position: 'bottom-right', theme: 'dark' });
       navigate('/login');
-      return; // Exit the function early
+      return;
     }
 
-    // Toggle the favorite status
-    toggleFavorite({ id, name, image, new_price, old_price });
+    // Pass the user to toggleFavorite
+    const success = toggleFavorite({ id, name, image, new_price, old_price }, user);
 
-    // Show appropriate toast notifications
-    if (!isFavorited) {
-      toast.success('Added to Wishlist', { position: 'bottom-right', theme: 'dark' });
-    } else {
-      toast.error('Removed from Wishlist', { position: 'bottom-right', theme: 'dark' });
+    if (success) {
+      if (!isFavorited) {
+        toast.success('Added to Wishlist', { position: 'bottom-right', theme: 'dark' });
+      } else {
+        toast.error('Removed from Wishlist', { position: 'bottom-right', theme: 'dark' });
+      }
     }
   };
 
@@ -46,6 +48,11 @@ const ProductCard = ({ id, name, image, new_price, old_price }) => {
     addToCart({ id, name, image, new_price, old_price });
     toast.success(`Added to cart!`, { position: 'bottom-right', theme: 'dark' });
   };
+
+  // Log the updated favorites list whenever it changes
+  useEffect(() => {
+    console.log('Favorites updated:', favorites);
+  }, [favorites]);
 
   return (
     <div className="product-card shadow-sm">

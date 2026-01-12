@@ -11,91 +11,89 @@ import p10_img from './homeliving4.avif'
 import p11_img from './beauty6.webp'
 import p12_img from './homeliving3.avif'
 import p13_img from "./product_31.png";
-// Conversion rate from USD to INR
-const conversionRate = 83;
 
 let new_collections = [
   {
     id: 12,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     image: p1_img,
-    new_price: (50.0 * conversionRate),
-    old_price:  (80.5 * conversionRate),
+    new_price: 899,
+    old_price: 1499,
   },
   {
     id: 35,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     image: p2_img,
-    new_price:  (85.0 * conversionRate),
-    old_price:  (120.5 * conversionRate),
+    new_price: 699,
+    old_price: 1199,
   },
   {
     id: 14,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Full-Zip Slim Fit Bomber Jacket",
     image: p3_img,
-    new_price:  (60.0 * conversionRate),
-    old_price: (100.5 * conversionRate),
+    new_price: 1899,
+    old_price: 2899,
   },
   {
     id: 8,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     image: p4_img,
-    new_price:  (100.0 * conversionRate),
-    old_price:  (150.0 * conversionRate),
+    new_price: 999,
+    old_price: 1599,
   },
   {
     id: 15,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men super cool Green Solid Slim Fit Bomber Jacket",
     image: p5_img,
-    new_price:  (50.0 * conversionRate),
-    old_price:  (80.5 * conversionRate),
+    new_price: 1799,
+    old_price: 2699,
   },
   {
     id: 2,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     image: p6_img,
-    new_price:  (85.0 * conversionRate),
-    old_price: (120.5 * conversionRate),
+    new_price: 949,
+    old_price: 1499,
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Zippered Bomber Jacket",
     image: p7_img,
-    new_price:  (60.0 * conversionRate),
-    old_price: (100.5 * conversionRate),
+    new_price: 1699,
+    old_price: 2599,
   },
   {
     id: 28,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     image: p8_img,
-    new_price:  (100.0 * conversionRate),
-    old_price:  (150.0 * conversionRate),
+    new_price: 749,
+    old_price: 1299,
   },
   {
     id: 3,
     name: "Striped Flutter Sleeve Overlap Collar Blouse",
     category: "women",
     image: p9_img,
-    new_price:  (60.0 * 83),
-    old_price:  (100.5 * 83),
+    new_price: 1399,
+    old_price: 2199,
     ratings: 4.9
   },
   {
     id: 40,
-    name: "Cotton Oriental Set of 2 Bath Towel",
+    name: "Cotton Set of 2 Bath Towels",
     category: "homeandliving",
     image: p10_img,
-    new_price: "1,494",
-    old_price: "2,299",
+    new_price: 799,
+    old_price: 1499,
     ratings: 3.2
   },
   {
     id: 54,
-    name: "4 in 1 Hair Styler Hair Straightening Brush",
+    name: "4 in 1 Hair Styler Straightening Brush",
     category: "beauty",
     image: p11_img,
-    new_price: "2,199",
-    old_price: "3,999",
+    new_price: 1299,
+    old_price: 2499,
     ratings: 4.0
   },
   {
@@ -103,8 +101,8 @@ let new_collections = [
     name: "Tribal Print Antiskid Runner & Mat",
     category: "homeandliving",
     image: p12_img,
-    new_price: "480",
-    old_price: "1,999",
+    new_price: 499,
+    old_price: 1299,
     ratings: 4.5
   },
   {
@@ -112,10 +110,11 @@ let new_collections = [
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
     image: p13_img,
-    new_price: (85.0 * 83),
-    old_price: (120.5 * 83),
-    rating:4
+    new_price: 699,
+    old_price: 1199,
+    ratings: 4
   },
 ];
+
 
 export default new_collections;

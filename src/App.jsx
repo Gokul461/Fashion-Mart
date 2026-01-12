@@ -4,11 +4,11 @@ import Nav from "./components/navbar/nav";
 import Shop from "./components/pages/shop/shop";
 import Footer from "./components/Footer/footer";
 import ShopCategory from "./components/shopcategory/shopcategory";
-import men_banner from "./assets/images/menbanner3.png";
-import women_banner from "./assets/images/womanbanner.png";
-import Homeliving_banner from "./assets/images/homebanner.png";
-import Beauty_banner from "./assets/images/beautybanner2.jpg";
-import kids_banner from "./assets/images/kidsbanner.png";
+// import men_banner from "./assets/images/menbanner3.png";
+// import women_banner from "./assets/images/womanbanner.png";
+// import Homeliving_banner from "./assets/images/homebanner.png";
+// import Beauty_banner from "./assets/images/beautybanner2.jpg";
+// import kids_banner from "./assets/images/kidsbanner.png";
 import Menslider from "./components/slider/Men slider/mslider";
 import Womanslider from "./components/slider/womanslider/womanslider";
 import Kidslider from "./components/slider/kidsslider";
@@ -44,7 +44,7 @@ function App() {
             element={
               <ShopCategory
                 slider={<Menslider />}
-                banner={men_banner}
+                // banner={men_banner}
                 banner2={men_img}
                 category="men"
               />
@@ -55,7 +55,7 @@ function App() {
             element={
               <ShopCategory
                 slider={<Womanslider />}
-                banner={women_banner}
+                // banner={women_banner}
                 banner2={women_img}
                 category="women"
               />
@@ -66,7 +66,7 @@ function App() {
             element={
               <ShopCategory
                 slider={<Kidslider />}
-                banner={kids_banner}
+                // banner={kids_banner}
                 banner2={kids_img}
                 category="kid"
               />
@@ -78,7 +78,7 @@ function App() {
             path="/homeandliving"
             element={
               <ShopCategory
-                banner={Homeliving_banner}
+                // banner={Homeliving_banner}
                 banner2={Homeliving_img}
                 category="homeandliving"
               />
@@ -88,7 +88,7 @@ function App() {
             path="/beauty"
             element={
               <ShopCategory
-                banner={Beauty_banner}
+            //    banner={Beauty_banner}
                 banner2={beauty_img}
                 category="beauty"
               />
