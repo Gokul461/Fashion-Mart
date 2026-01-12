@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import Item from "../item/item";
 import "./shopcategory.css";
 import savingimg from "../../assets/images/discountimg2.jpg.png";
-import { ShopContext } from "../Context/shopContextProvider";
+import { ShopContext } from "../contextprovider/shopContextProvider";
 import Dropdown_icon from "../../assets/images/dropdown_icon.png";
 import Dis from "../slider/disslide";
 const ShopCategory = (props) => {

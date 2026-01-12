@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ShopContext } from "../../Context/shopContextProvider";
-import { useAuth } from "../../Context/AuthProvider";
+import { ShopContext } from "../../contextprovider/shopContextProvider";
+import { useAuth } from "../../contextprovider/AuthProvider";
 import { useNavigate, Link } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { toast } from "react-toastify";

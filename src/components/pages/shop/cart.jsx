@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { ShopContext } from '../../Context/shopContextProvider';
+import { ShopContext } from '../../contextprovider/shopContextProvider';
 import './cart.css';
 import { toast } from "react-toastify";
 import Emptycart from '../../../assets/images/emptycart.avif';  // Ensure the correct path
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../Context/AuthProvider'; // Import useAuth hook
+import { useAuth } from '../../contextprovider/AuthProvider'; // Import useAuth hook
 
 const Cart = () => {
   const { cart, setCart } = useContext(ShopContext);

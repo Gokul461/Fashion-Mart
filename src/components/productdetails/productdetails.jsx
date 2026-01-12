@@ -4,8 +4,8 @@ import all_products from "../../assets/images/all_product";
 import "./productdetails.css";
 import { toast } from "react-toastify";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { ShopContext } from "../Context/shopContextProvider";
-import { useAuth } from "../../components/Context/AuthProvider";
+import { ShopContext } from "../contextprovider/shopContextProvider";
+import { useAuth } from "../contextprovider/AuthProvider";
 
 const ProductDetails = () => {
   const { id } = useParams();

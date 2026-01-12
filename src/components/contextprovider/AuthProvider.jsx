@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../Firebase.js";
-import { ShopContext } from "./shopContextProvider";
+import { ShopContext } from "./shopContextProvider.jsx";
 
 const AuthContext = createContext();
 
