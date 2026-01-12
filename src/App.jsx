@@ -29,7 +29,7 @@ import Giftcards from "./components/navbar/profile/ProfileMenus/GiftCards/Giftca
 import Coupons from "./components/navbar/profile/ProfileMenus/Coupons/Coupons";
 import Contact from "./components/navbar/profile/ProfileMenus/Contact/Contact";
 import Wishlist from "./components/pages/shop/Wishlist";
-import  SerachRender from "./components/navbar/Search/SerachRender";
+import  SerachRender from "./components/navbar/Search/SearchRender";
 function App() {
   return (
     <div className="bg-white">
